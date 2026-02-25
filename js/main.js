@@ -1,6 +1,7 @@
 import { initBucketElevator } from './models/02-bucketElevator.js';
 import { initFreightElevator } from './models/05-freightElevator.js';
 import { initLoadingBarley } from './models/03-LoadingBarleyIntoTheGranary.js';
+import { initLoadingBarley } from './models/06-unloadingBarleyFromTheGranary.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     
@@ -38,6 +39,17 @@ document.addEventListener('DOMContentLoaded', () => {
             
             // ВАЖНО: Запускаем GSAP только ПОСЛЕ того, как картинка вставилась на страницу!
             initFreightElevator();
+        })
+        .catch(error => console.error("Ошибка загрузки SVG:", error));
+
+    fetch('source-files/svgs/06-unloadingBarleyFromTheGranary.svg')
+        .then(response => response.text()) // Получаем код файла как текст
+        .then(svgCode => {
+            // Вставляем полученный код в наш пустой div
+            document.getElementById('06-unloadingBarleyFromTheGranary').innerHTML = svgCode;
+            
+            // ВАЖНО: Запускаем GSAP только ПОСЛЕ того, как картинка вставилась на страницу!
+            initUnloadingBarley();
         })
         .catch(error => console.error("Ошибка загрузки SVG:", error));
 

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 2363 945" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <g id="grain-floor-section">
+        <g id="building-structure">
+            <g id="ground">
+                <path d="M56.211,795.531l0.122,20.384l2210.357,0.841l1.027,-20.258l-2211.505,-0.968Z" style="fill:#785135;stroke:#000;stroke-width:0.66px;"/>
+            </g>
+            <g id="roof">
+                <rect x="238.097" y="206.79" width="25.949" height="69.397" style="fill:#e56910;stroke:#000;stroke-width:0.55px;"/>
+                <rect x="263.882" y="207.549" width="71.359" height="68.83" style="fill:#e56910;stroke:#000;stroke-width:0.55px;"/>
+                <rect x="335.662" y="207.854" width="71.359" height="68.83" style="fill:#e56910;stroke:#000;stroke-width:0.55px;"/>
+                <rect x="406.85" y="207.831" width="71.359" height="68.83" style="fill:#e56910;stroke:#000;stroke-width:0.55px;"/>
+                <rect x="478.309" y="207.7" width="71.359" height="68.83" style="fill:#e56910;stroke:#000;stroke-width:0.55px;"/>
+                <rect x="549.721" y="207.223" width="71.359" height="68.83" style="fill:#e56910;stroke:#000;stroke-width:0.55px;"/>
+                <rect x="621.108" y="207.566" width="71.359" height="68.83" style="fill:#e56910;stroke:#000;stroke-width:0.55px;"/>
+                <rect x="692.647" y="207.33" width="71.359" height="68.83" style="fill:#e56910;stroke:#000;stroke-width:0.55px;"/>
+                <rect x="764.396" y="207.324" width="71.359" height="68.83" style="fill:#e56910;stroke:#000;stroke-width:0.55px;"/>
+                <rect x="835.715" y="207.611" width="71.359" height="68.83" style="fill:#e56910;stroke:#000;stroke-width:0.55px;"/>
+                <rect x="907.207" y="207.784" width="71.359" height="68.83" style="fill:#e56910;stroke:#000;stroke-width:0.55px;"/>
+                <rect x="978.738" y="207.48" width="71.359" height="68.83" style="fill:#e56910;stroke:#000;stroke-width:0.55px;"/>
+                <rect x="1050.156" y="207.979" width="71.359" height="68.83" style="fill:#e56910;stroke:#000;stroke-width:0.55px;"/>
+                <rect x="1121.686" y="207.751" width="71.359" height="68.83" style="fill:#e56910;stroke:#000;stroke-width:0.55px;"/>
+                <rect x="1193.732" y="207.291" width="71.359" height="68.83" style="fill:#e56910;stroke:#000;stroke-width:0.55px;"/>
+                <rect x="1265.495" y="207.448" width="71.359" height="68.83" style="fill:#e56910;stroke:#000;stroke-width:0.55px;"/>
+                <rect x="1336.969" y="207.213" width="71.359" height="68.83" style="fill:#e56910;stroke:#000;stroke-width:0.55px;"/>
+                <rect x="1408.414" y="207.596" width="71.359" height="68.83" style="fill:#e56910;stroke:#000;stroke-width:0.55px;"/>
+                <rect x="1480.312" y="207.317" width="71.359" height="68.83" style="fill:#e56910;stroke:#000;stroke-width:0.55px;"/>
+                <rect x="1551.979" y="207.386" width="71.359" height="68.83" style="fill:#e56910;stroke:#000;stroke-width:0.55px;"/>
+                <rect x="1623.88" y="207.413" width="71.359" height="68.83" style="fill:#e56910;stroke:#000;stroke-width:0.55px;"/>
+                <rect x="1695.07" y="207.116" width="71.359" height="68.83" style="fill:#e56910;stroke:#000;stroke-width:0.55px;"/>
+                <rect x="1766.851" y="207.133" width="71.359" height="68.83" style="fill:#e56910;stroke:#000;stroke-width:0.55px;"/>
+                <rect x="1838.463" y="207.167" width="71.359" height="68.83" style="fill:#e56910;stroke:#000;stroke-width:0.55px;"/>
+                <rect x="1910.074" y="207.2" width="71.359" height="68.83" style="fill:#e56910;stroke:#000;stroke-width:0.55px;"/>
+                <rect x="1981.686" y="207.234" width="71.359" height="68.83" style="fill:#e56910;stroke:#000;stroke-width:0.55px;"/>
+                <rect x="2053.298" y="207.268" width="71.359" height="68.83" style="fill:#e56910;stroke:#000;stroke-width:0.55px;"/>
+                <rect x="2124.909" y="207.301" width="89.853" height="68.83" style="fill:#e56910;stroke:#000;stroke-width:0.55px;"/>
+                <rect x="2214.762" y="207.716" width="32.616" height="172.97" style="fill:#e56910;stroke:#000;stroke-width:0.55px;"/>
+            </g>
+            <g id="wall-lower">
+                <rect x="598.846" y="597.067" width="1632.741" height="199.459" style="fill:#f8e08e;stroke:#000;stroke-width:0.55px;"/>
+            </g>
+            <rect id="tower17" x="91.772" y="226.115" width="130.69" height="569.091" style="fill:#f8e08e;stroke:#000;stroke-width:0.55px;"/>
+            <rect id="tower16" x="53.803" y="118.11" width="196.089" height="11.391" style="fill:#f8e08e;stroke:#000;stroke-width:0.55px;"/>
+            <rect id="screw-conveyor" x="138.946" y="221.769" width="39.605" height="570.286" style="fill:#407ec9;stroke:#000;stroke-width:0.55px;"/>
+            <rect id="tower15" x="76.179" y="186.3" width="15.758" height="65.794" style="fill:#f8e08e;stroke:#000;stroke-width:0.55px;"/>
+            <rect id="tower14" x="222.59" y="187.05" width="15.423" height="49.088" style="fill:#f8e08e;stroke:#000;stroke-width:0.55px;"/>
+            <rect id="tower13" x="92.061" y="211.437" width="130.619" height="14.372" style="fill:#f8e08e;stroke:#000;stroke-width:0.55px;"/>
+            <path id="tower12" d="M47.244,166.033l211.441,0.435l-9.412,20.355l-192.978,-0.457l-9.051,-20.333Z" style="fill:#f8e08e;stroke:#000;stroke-width:0.55px;"/>
+            <rect id="tower10" x="65.751" y="129.686" width="17.504" height="36.431" style="fill:#f8e08e;stroke:#000;stroke-width:0.55px;"/>
+            <rect id="tower9" x="83.449" y="129.63" width="17.504" height="36.431" style="fill:#f8e08e;stroke:#000;stroke-width:0.55px;"/>
+            <rect id="tower8" x="101.423" y="129.596" width="17.504" height="36.431" style="fill:#f8e08e;stroke:#000;stroke-width:0.55px;"/>
+            <rect id="tower7" x="119.396" y="129.561" width="17.504" height="36.431" style="fill:#f8e08e;stroke:#000;stroke-width:0.55px;"/>
+            <rect id="tower6" x="137.151" y="129.596" width="17.504" height="36.431" style="fill:#f8e08e;stroke:#000;stroke-width:0.55px;"/>
+            <rect id="tower5" x="154.906" y="129.63" width="17.504" height="36.431" style="fill:#f8e08e;stroke:#000;stroke-width:0.55px;"/>
+            <rect id="tower4" x="172.661" y="129.665" width="17.504" height="36.431" style="fill:#f8e08e;stroke:#000;stroke-width:0.55px;"/>
+            <rect id="tower3" x="190.416" y="129.699" width="17.504" height="36.431" style="fill:#f8e08e;stroke:#000;stroke-width:0.55px;"/>
+            <rect id="tower2" x="208.171" y="129.734" width="17.504" height="36.431" style="fill:#f8e08e;stroke:#000;stroke-width:0.55px;"/>
+            <rect id="tower1" x="225.925" y="129.768" width="17.504" height="36.431" style="fill:#f8e08e;stroke:#000;stroke-width:0.55px;"/>
+            <rect id="building-wall-2" x="90.422" y="186.466" width="134.112" height="24.941" style="fill:#f8e08e;stroke:#000;stroke-width:0.55px;"/>
+            <g id="building-wall-1">
+                <rect x="246.777" y="276.183" width="1967.632" height="103.633" style="fill:#f8e08e;"/>
+            </g>
+            <g id="building">
+                <path d="M246.557,235.644l-23.524,0.247l0.018,559.252c0,0 379.659,-0.9 377.702,0.745c-1.957,1.645 -1.129,-197.649 -1.129,-197.649l1633.874,6.207l0.326,-222.935l-1987.428,-2.23l0.162,-143.636Z" style="fill:#fdd26e;"/>
+            </g>
+            <g id="window5">
+                <path d="M1269.538,531.008l-0.151,-49.582c37.334,-22.782 66.468,0.741 66.468,0.741l0.7,49.212l-67.017,-0.371Z" style="fill:#5a4224;"/>
+                <path d="M1274.085,525.168l-0.132,-40.156c32.729,-18.451 58.269,0.6 58.269,0.6l0.613,39.856l-58.75,-0.3Z" style="fill:#6d6d6d;"/>
+            </g>
+            <g id="window4">
+                <path d="M1612.725,535.99l-0.151,-49.582c37.334,-22.782 66.468,0.741 66.468,0.741l0.7,49.212l-67.017,-0.371Z" style="fill:#5a4224;"/>
+                <path d="M1617.272,530.15l-0.132,-40.156c32.729,-18.451 58.269,0.6 58.269,0.6l0.613,39.856l-58.75,-0.3Z" style="fill:#6d6d6d;"/>
+            </g>
+            <g id="window3">
+                <path d="M1588.82,723.274l-0.151,-49.582c37.334,-22.782 66.468,0.741 66.468,0.741l0.7,49.212l-67.017,-0.371Z" style="fill:#5a4224;"/>
+                <path d="M1593.367,717.434l-0.132,-40.156c32.729,-18.451 58.269,0.6 58.269,0.6l0.613,39.856l-58.75,-0.3Z" style="fill:#6d6d6d;"/>
+            </g>
+            <g id="window2">
+                <path d="M755.425,723.274l-0.151,-49.582c37.334,-22.782 66.468,0.741 66.468,0.741l0.7,49.212l-67.017,-0.371Z" style="fill:#5a4224;"/>
+                <path d="M759.972,717.434l-0.132,-40.156c32.729,-18.451 58.269,0.6 58.269,0.6l0.613,39.856l-58.75,-0.3Z" style="fill:#6d6d6d;"/>
+            </g>
+            <g id="window1">
+                <path d="M1998.236,723.274l-0.151,-49.582c37.334,-22.782 66.468,0.741 66.468,0.741l0.7,49.212l-67.017,-0.371Z" style="fill:#5a4224;"/>
+                <path d="M2002.783,717.434l-0.132,-40.156c32.729,-18.451 58.269,0.6 58.269,0.6l0.613,39.856l-58.75,-0.3Z" style="fill:#6d6d6d;"/>
+            </g>
+        </g>
+        <g id="scoop">
+            <rect class="scoop" id="scoop25" x="149.484" y="234.267" width="17.065" height="12.615" style="fill:#f8e08e;stroke:#000;stroke-width:0.55px;"/>
+            <rect class="scoop" id="scoop24" x="149.426" y="255.645" width="17.065" height="12.615" style="fill:#f8e08e;stroke:#000;stroke-width:0.55px;"/>
+            <rect class="scoop" id="scoop23" x="149.368" y="277.024" width="17.065" height="12.615" style="fill:#f8e08e;stroke:#000;stroke-width:0.55px;"/>
+            <rect class="scoop" id="scoop22" x="149.311" y="298.403" width="17.065" height="12.615" style="fill:#f8e08e;stroke:#000;stroke-width:0.55px;"/>
+            <rect class="scoop" id="scoop21" x="149.253" y="319.782" width="17.065" height="12.615" style="fill:#f8e08e;stroke:#000;stroke-width:0.55px;"/>
+            <rect class="scoop" id="scoop20" x="149.195" y="341.161" width="17.065" height="12.615" style="fill:#f8e08e;stroke:#000;stroke-width:0.55px;"/>
+            <rect class="scoop" id="scoop19" x="149.138" y="362.54" width="17.065" height="12.615" style="fill:#f8e08e;stroke:#000;stroke-width:0.55px;"/>
+            <rect class="scoop" id="scoop18" x="149.08" y="383.918" width="17.065" height="12.615" style="fill:#f8e08e;stroke:#000;stroke-width:0.55px;"/>
+            <rect class="scoop" id="scoop181" serif:id="scoop18" x="149.022" y="405.297" width="17.065" height="12.615" style="fill:#f8e08e;stroke:#000;stroke-width:0.55px;"/>
+            <rect class="scoop" id="scoop17" x="148.964" y="426.676" width="17.065" height="12.615" style="fill:#f8e08e;stroke:#000;stroke-width:0.55px;"/>
+            <rect class="scoop" id="scoop16" x="148.907" y="448.055" width="17.065" height="12.615" style="fill:#f8e08e;stroke:#000;stroke-width:0.55px;"/>
+            <rect class="scoop" id="scoop15" x="148.849" y="469.434" width="17.065" height="12.615" style="fill:#f8e08e;stroke:#000;stroke-width:0.55px;"/>
+            <rect class="scoop" id="scoop14" x="148.791" y="490.813" width="17.065" height="12.615" style="fill:#f8e08e;stroke:#000;stroke-width:0.55px;"/>
+            <rect class="scoop" id="scoop13" x="148.733" y="512.191" width="17.065" height="12.615" style="fill:#f8e08e;stroke:#000;stroke-width:0.55px;"/>
+            <rect class="scoop" id="scoop12" x="148.676" y="533.57" width="17.065" height="12.615" style="fill:#f8e08e;stroke:#000;stroke-width:0.55px;"/>
+            <rect class="scoop" id="scoop11" x="148.618" y="554.949" width="17.065" height="12.615" style="fill:#f8e08e;stroke:#000;stroke-width:0.55px;"/>
+            <rect class="scoop" id="scoop10" x="148.56" y="576.328" width="17.065" height="12.615" style="fill:#f8e08e;stroke:#000;stroke-width:0.55px;"/>
+            <rect class="scoop" id="scoop9" x="148.503" y="597.707" width="17.065" height="12.615" style="fill:#f8e08e;stroke:#000;stroke-width:0.55px;"/>
+            <rect class="scoop" id="scoop8" x="148.445" y="619.086" width="17.065" height="12.615" style="fill:#f8e08e;stroke:#000;stroke-width:0.55px;"/>
+            <rect class="scoop" id="scoop7" x="148.387" y="640.464" width="17.065" height="12.615" style="fill:#f8e08e;stroke:#000;stroke-width:0.55px;"/>
+            <rect class="scoop" id="scoop6" x="148.329" y="661.843" width="17.065" height="12.615" style="fill:#f8e08e;stroke:#000;stroke-width:0.55px;"/>
+            <rect class="scoop" id="scoop5" x="148.272" y="683.222" width="17.065" height="12.615" style="fill:#f8e08e;stroke:#000;stroke-width:0.55px;"/>
+            <rect class="scoop" id="scoop4" x="148.214" y="704.601" width="17.065" height="12.615" style="fill:#f8e08e;stroke:#000;stroke-width:0.55px;"/>
+            <rect class="scoop" id="scoop3" x="148.156" y="725.98" width="17.065" height="12.615" style="fill:#f8e08e;stroke:#000;stroke-width:0.55px;"/>
+            <rect class="scoop" id="scoop2" x="148.098" y="747.359" width="17.065" height="12.615" style="fill:#f8e08e;stroke:#000;stroke-width:0.55px;"/>
+            <rect class="scoop" id="scoop1" x="148.041" y="768.737" width="17.065" height="12.615" style="fill:#f8e08e;stroke:#000;stroke-width:0.55px;"/>
+            <path id="scoop-motionpath" d="M158.748,795.206l0,-569.397" style="fill:none;stroke:none;stroke-width:16.52px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:5;"/>
+        </g>
+        <g id="screw-conveyor-system-all">
+            <rect id="screw-conveyor-system4" x="247.395" y="314.092" width="1966.454" height="13.579" style="fill:#407ec9;stroke:#000;stroke-width:0.55px;"/>
+            <rect id="screw-conveyor-system3" x="1433.666" y="327.832" width="7.672" height="51.48" style="fill:#407ec9;"/>
+            <rect id="screw-conveyor-system2" x="1071.343" y="327.593" width="7.672" height="51.48" style="fill:#407ec9;"/>
+            <rect id="screw-conveyor-system1" x="1821.451" y="327.412" width="7.672" height="51.48" style="fill:#407ec9;"/>
+            <g id="falling-grain3">
+                <path d="M1419.796,411.037l-51.779,161.062" style="fill:none;stroke:#ffad00;stroke-width:5.51px;stroke-dasharray:5.507,11.013,0,0,0,0;"/>
+                <path d="M1456.323,411.203l56.502,150.117" style="fill:none;stroke:#ffad00;stroke-width:5.51px;stroke-dasharray:5.507,11.013,0,0,0,0;"/>
+                <path d="M1437.821,414.545l-27.926,160.821" style="fill:none;stroke:#ffad00;stroke-width:5.51px;stroke-dasharray:5.507,11.013,0,0,0,0;"/>
+                <path d="M1452.033,439.055l23.29,129.927" style="fill:none;stroke:#ffad00;stroke-width:5.51px;stroke-dasharray:5.507,11.013,0,0,0,0;"/>
+            </g>
+            <g id="falling-grain2">
+                <path d="M1049.414,412.725l-51.779,160.111" style="fill:none;stroke:#ffad00;stroke-width:5.51px;stroke-dasharray:5.507,11.013,0,0,0,0;"/>
+                <path d="M1085.941,412.889l56.502,149.23" style="fill:none;stroke:#ffad00;stroke-width:5.51px;stroke-dasharray:5.507,11.013,0,0,0,0;"/>
+                <path d="M1067.439,416.212l-27.926,159.871" style="fill:none;stroke:#ffad00;stroke-width:5.51px;stroke-dasharray:5.507,11.013,0,0,0,0;"/>
+                <path d="M1081.652,440.577l23.29,129.16" style="fill:none;stroke:#ffad00;stroke-width:5.51px;stroke-dasharray:5.507,11.013,0,0,0,0;"/>
+            </g>
+            <g id="falling-grain1">
+                <path d="M1806.998,414.085l-51.779,159.165" style="fill:none;stroke:#ffad00;stroke-width:5.51px;stroke-dasharray:5.507,11.013,0,0,0,0;"/>
+                <path d="M1843.526,414.249l56.502,148.349" style="fill:none;stroke:#ffad00;stroke-width:5.51px;stroke-dasharray:5.507,11.013,0,0,0,0;"/>
+                <path d="M1825.024,417.551l-27.926,158.927" style="fill:none;stroke:#ffad00;stroke-width:5.51px;stroke-dasharray:5.507,11.013,0,0,0,0;"/>
+                <path d="M1839.236,441.773l23.29,128.398" style="fill:none;stroke:#ffad00;stroke-width:5.51px;stroke-dasharray:5.507,11.013,0,0,0,0;"/>
+            </g>
+        </g>
+    </g>
+</svg>

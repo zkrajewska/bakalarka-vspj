@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+#page1{
+    height: 100%;
+    width: 100%;
+    background-color: beige;
+}
+
+#page2{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: darkgrey;
+}
+
+#page3{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: beige;
+}
+
+#page4{
+    height: 100%;
+    width: 100%;
+    background-color: darkgrey;
+}
+
+#page5{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: beige;
+}
+
+.small-screen {
+    /* Задаем жесткие размеры нашему "окну" */
+    width: 50vw; 
+    height: 60vh; /* Используем height, а не max-height, чтобы блок не сплющило */
+    border: 2px solid red; 
+    
+    
+    
+    /* Центрируем содержимое внутри окна */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Растягиваем пустой div (например, #02-bucketElevator), в который fetch вставляет код */
+.small-screen > div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Заставляем сам SVG занимать максимум места внутри обертки */
+.small-screen svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+    /* object-fit: contain; можно добавить, если пропорции будут сильно искажаться */
+}
+
+

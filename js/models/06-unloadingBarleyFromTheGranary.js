@@ -27,7 +27,7 @@ export function initUnloadingBarley() {
         { 
             scaleY: 1,
             opacity: 1,
-            duration: 5,         // Каждая куча растет 5 секунд
+            duration: 12,         // Каждая куча растет 5 секунд
             ease: "power2.out",  // Чуть замедляется в конце
             
             // МАГИЯ ЗДЕСЬ: каждая следующая куча начнет расти на 1 секунду позже предыдущей!
@@ -39,7 +39,7 @@ export function initUnloadingBarley() {
     );
 
     // 1. Верхняя куча (#grain2) - убывает, "стекая" вниз в воронку
-    gsap.fromTo("#grain2", 
+    gsap.fromTo("#unloading-grain2", 
         { scaleY: 1 }, 
         { 
             scaleY: 0.1, 
@@ -54,17 +54,7 @@ export function initUnloadingBarley() {
 
 
 
-    // 3. Воронка (#grain1) - легкая пульсация, имитирующая проваливание зерна
-    gsap.to("#grain1", {
-        scaleY: 0.9,
-        y: 2,                 // Чуть-чуть дергается вниз
-        duration: 0.2,
-        yoyo: true,           // Возвращается обратно
-        repeat: -1,           // Дергается постоянно
-        ease: "sine.inOut",
-        transformOrigin: "top center"
-    });
-
+    
     // 4. Падающая струя (если ты добавила линию #grain-stream)
     if (document.querySelector("#grain-stream")) {
         gsap.to("#grain-stream", {

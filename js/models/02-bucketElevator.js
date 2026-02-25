@@ -35,15 +35,29 @@ export function initBucketElevator() {
     // Выбираем все пути внутри группы #grain
     const grains = gsap.utils.toArray("#grain path");
 
-    // Запускаем анимацию смещения пунктира
-    gsap.to(grains, {
-        // Смещаем ровно на один цикл (черточка + пробел)
-        // Если зерно полетит ВВЕРХ, просто убери минус перед числом!
+    // 1. Сначала мы лечим баг SVG: принудительно задаем всем зернам чистый паттерн без нулей!
+    gsap.set(".grain", { 
+        strokeDasharray: "36.482, 29.186" 
+    });
+
+    // 2. Группируем НИЖНИЕ зерна (1, 2, 3)
+    const bottomGrains = ["#grain1", "#grain2", "#grain3"];
+    
+    gsap.to(bottomGrains, {
         strokeDashoffset: -65.668, 
-        
-        duration: 1,   // Скорость падения (меньше = быстрее)
-        ease: "none",    // Обязательно "none", чтобы поток лился равномерно, без рывков
-        repeat: -1       // Бесконечный цикл
+        duration: 0.5,   // Скорость для нижних (можешь менять)
+        ease: "none",    
+        repeat: -1       
+    });
+
+    // 3. Группируем ВЕРХНИЕ зерна (4, 5, 6)
+    const topGrains = ["#grain4", "#grain5", "#grain6"];
+    
+    gsap.to(topGrains, {
+        strokeDashoffset: -65.668, 
+        duration: 0.5,   // Скорость для верхних
+        ease: "none",    
+        repeat: -1       
     });
 
     gsap.to("#chain", {

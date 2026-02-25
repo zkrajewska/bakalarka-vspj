@@ -1,7 +1,7 @@
 import { initBucketElevator } from './models/02-bucketElevator.js';
 import { initFreightElevator } from './models/05-freightElevator.js';
 import { initLoadingBarley } from './models/03-LoadingBarleyIntoTheGranary.js';
-import { initLoadingBarley } from './models/06-unloadingBarleyFromTheGranary.js';
+import { initUnloadingBarley } from './models/06-unloadingBarleyFromTheGranary.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     

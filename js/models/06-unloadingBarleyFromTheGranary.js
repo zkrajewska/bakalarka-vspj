@@ -43,7 +43,7 @@ export function initUnloadingBarley() {
         { scaleY: 1 }, 
         { 
             scaleY: 0.1, 
-            duration: 10,             
+            duration: 12,             
             ease: "none", 
             // Жестко прибиваем точку к низу верхней кучи
             transformOrigin: "50% 100%", 

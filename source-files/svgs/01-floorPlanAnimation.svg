@@ -3,7 +3,7 @@
 <svg width="100%" height="100%" viewBox="0 0 1827 500" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
     <g id="floor-plan-base">
         <g id="floor">
-            <rect x="8.417" y="13.787" width="1816.1" height="451.01" style="fill:#efc462;"/>
+            <rect x="8.417" y="13.787" width="1816.1" height="451.01" style="fill:#F5F5F5;"/>
         </g>
         <g id="walls">
             <path d="M4.167,9.906l0.26,454.192l318.124,-1.572l-13.078,-36.581l-74.256,-0.065l-0.561,-82.28l-86.055,-0.178l-0.213,90.689l-132.386,0.833l-0.233,-135.238l218.549,0.087l0.031,-71.157l-29.757,-0.096l-0.085,47.305l-177.078,0.067l-0.09,-224.229l59.238,-0.035l283.477,-0.277l-0.131,11.808l35.325,0.197l0.101,-11.915l141.668,-0.085l0.155,13.101l35.345,-0.022l0.088,-12.953l141.675,0.038l0.246,16.666l35.101,-0.141l-0.037,-16.586l248.176,0.134l0.052,200.375l35.287,0.21l0.317,-200.782l247.864,0.024l1.829,198.311l47.08,0.085l-1.661,-198.298l200.521,0.106l0.459,247.864l82.397,-0.177l0.086,-35.276l-35.603,-0.069l-0.046,-212.454l188.898,-0.056l0.39,212.704l-23.883,0.008l0.142,35.25l23.663,-0.03l0.065,165.445l-200.942,-0.017l-30.739,-11.837l-205.669,0.157l0.88,-47.415l-47.4,-0.216l-0.791,47.48l-247.813,-0.093l-0.044,-47.172l-59.01,-0.029l0.157,35.327l-224.634,0.212l0.009,-23.717l-26.033,0.124l0.056,47.161l-68.452,0.013l-0.084,-35.522l-302.323,-3.491l-9.449,36.614l252.756,2.418l0,11.755l401.575,0l0,17.717l484.252,0l330.709,1.181l0,-491.339l-1818.465,5.74Z" style="fill:#cab391;stroke:#cab391;stroke-width:8.33px;"/>
@@ -65,13 +65,13 @@
         </g>
     </g>
     <g id="wheel">
-        <ellipse id="wheel-outer" cx="1444.679" cy="165.097" rx="67.138" ry="66.442" style="fill:#23201a;"/>
-        <ellipse id="wheel-middle" cx="1445.015" cy="165.496" rx="60.437" ry="58.243" style="fill:#6b4826;"/>
-        <rect id="wheel-spoke4" x="1442.818" y="109.483" width="6.424" height="114.026" style="fill:#d0b78e;"/>
-        <path id="wheel-spoke3" d="M1488.601,128.436l-80.597,80.66l-4.544,-4.541l80.597,-80.66l4.544,4.541Z" style="fill:#d0b78e;"/>
-        <path id="wheel-spoke2" d="M1503.069,169.216l-114.021,0.983l-0.055,-6.424l114.021,-0.983l0.055,6.424Z" style="fill:#d0b78e;"/>
-        <path id="wheel-spoke1" d="M1484.786,208.434l-81.976,-79.257l4.465,-4.618l81.976,79.257l-4.465,4.618Z" style="fill:#d0b78e;"/>
-        <ellipse id="wheel-center" cx="1445.063" cy="166.451" rx="14.454" ry="13.651" style="fill:#f7eed5;"/>
+        <ellipse class="wheel-part" id="wheel-outer" cx="1444.679" cy="165.097" rx="67.138" ry="66.442" style="fill:#23201a;"/>
+        <ellipse class="wheel-part" id="wheel-middle" cx="1445.015" cy="165.496" rx="60.437" ry="58.243" style="fill:#6b4826;"/>
+        <rect class="wheel-part" id="wheel-spoke4" x="1442.818" y="109.483" width="6.424" height="114.026" style="fill:#d0b78e;"/>
+        <path class="wheel-part" id="wheel-spoke3" d="M1488.601,128.436l-80.597,80.66l-4.544,-4.541l80.597,-80.66l4.544,4.541Z" style="fill:#d0b78e;"/>
+        <path class="wheel-part" id="wheel-spoke2" d="M1503.069,169.216l-114.021,0.983l-0.055,-6.424l114.021,-0.983l0.055,6.424Z" style="fill:#d0b78e;"/>
+        <path class="wheel-part" id="wheel-spoke1" d="M1484.786,208.434l-81.976,-79.257l4.465,-4.618l81.976,79.257l-4.465,4.618Z" style="fill:#d0b78e;"/>
+        <ellipse class="wheel-part" id="wheel-center" cx="1445.063" cy="166.451" rx="14.454" ry="13.651" style="fill:#f7eed5;"/>
         <rect id="wheel-base" x="1383.134" y="226.467" width="125.793" height="10.142" style="fill:#23201a;"/>
     </g>
     <g id="grain-pre-cleaner">
@@ -169,10 +169,10 @@
         </g>
     </g>
     <g id="grain-for-cleaner">
-        <path id="grain-for-cleaner5" d="M69.546,63.222l16.865,28.687" style="fill:none;stroke:#fff5a7;stroke-width:2.42px;stroke-dasharray:12.112,9.69,0,0,0,0;"/>
-        <path id="grain-for-cleaner4" d="M103.889,43.143l0.238,51.969" style="fill:none;stroke:#fff5a7;stroke-width:2.42px;stroke-dasharray:12.112,9.69,0,0,0,0;"/>
-        <path id="grain-for-cleaner3" d="M146.647,70.308c-0.064,-1.697 -20.079,23.622 -20.079,23.622" style="fill:none;stroke:#fff5a7;stroke-width:2.42px;stroke-dasharray:12.112,9.69,0,0,0,0;"/>
-        <path id="grain-for-cleaner2" d="M130.112,50.82c0,0 -11.965,41.932 -12.992,41.929" style="fill:none;stroke:#fff5a7;stroke-width:2.42px;stroke-dasharray:12.112,9.69,0,0,0,0;"/>
-        <path id="grain-for-cleaner1" d="M84.049,52.592l11.811,40.157" style="fill:none;stroke:#fff5a7;stroke-width:2.42px;stroke-dasharray:12.112,9.69,0,0,0,0;"/>
+        <path class="grain-for-cleaner" id="grain-for-cleaner5" d="M69.546,63.222l16.865,28.687" style="fill:none;stroke:#f4cf83;stroke-width:2.42px;stroke-dasharray:12.112,9.69,0,0,0,0;"/>
+        <path class="grain-for-cleaner" id="grain-for-cleaner4" d="M103.889,43.143l0.238,51.969" style="fill:none;stroke:#f4cf83;stroke-width:2.42px;stroke-dasharray:12.112,9.69,0,0,0,0;"/>
+        <path class="grain-for-cleaner" id="grain-for-cleaner3" d="M146.647,70.308c-0.064,-1.697 -20.079,23.622 -20.079,23.622" style="fill:none;stroke:#f4cf83;stroke-width:2.42px;stroke-dasharray:12.112,9.69,0,0,0,0;"/>
+        <path class="grain-for-cleaner" id="grain-for-cleaner2" d="M130.112,50.82c0,0 -11.965,41.932 -12.992,41.929" style="fill:none;stroke:#f4cf83;stroke-width:2.42px;stroke-dasharray:12.112,9.69,0,0,0,0;"/>
+        <path class="grain-for-cleaner" id="grain-for-cleaner1" d="M84.049,52.592l11.811,40.157" style="fill:none;stroke:#f4cf83;stroke-width:2.42px;stroke-dasharray:12.112,9.69,0,0,0,0;"/>
     </g>
 </svg>

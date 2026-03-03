@@ -37,16 +37,16 @@ export function initMaltingFloor() {
 
     liftTl.fromTo(piles,
         {scaleX: 0, scaleY: 0, transformOrigin: "50% 100%" },
-        {scaleX: 1, scaleY: 1, duration: 8, stagger: 2, ease: "steps.out" }
+        {scaleX: 1, scaleY: 1, duration: 5, stagger: 2, ease: "steps.out" }
     );
 
     liftTl.fromTo(cartPile,
         {scaleX: 0, scaleY: 0, transformOrigin: "50% 100%" },
-        {scaleX: 1, scaleY: 1, duration: 2, stagger: 0.5, ease: "none" }
+        {scaleX: 1, scaleY: 1, duration: 2, stagger: 0.5, ease: "none" }, "-=3"
     );
 
     liftTl.to(cart,
-        { x: +550, duration: 5 }
+        { x: +550, duration: 3 }
     );
 
     liftTl.to(cartPile,
@@ -55,7 +55,7 @@ export function initMaltingFloor() {
 
     liftTl.fromTo(elevatorCargo,
         {scaleX: 0, scaleY: 0, transformOrigin: "50% 100%" },
-        {scaleX: 1, scaleY: 1, duration: 2, stagger: 0.5, ease: "none" }
+        {scaleX: 1, scaleY: 1, duration: 1, stagger: 0.5, ease: "none" }
     );
 
     liftTl.to("#freight-elevator",
@@ -65,14 +65,14 @@ export function initMaltingFloor() {
 
 
     liftTl.set(cart,
-        {  scaleX: -1, duration: 2, stagger: 1, transformOrigin: "50% 50%"}
+        {  scaleX: -1, duration: 0.5, transformOrigin: "50% 50%"}
     );
 
     liftTl.to(cart,
-        { x: 0, duration: 5 }
+        { x: 0, duration: 3 }
     );
 
     liftTl.set(cart,
-        {  scaleX: -1, duration: 2 }
+        {  scaleX: -1, duration: 0.5 }
     );
 }

@@ -36,8 +36,8 @@ export function initMaltingFloor() {
     const liftTl = gsap.timeline({ repeat: -1, ease: "none"});
 
     liftTl.to(piles,
-        {scaleX: 1, scaleY: 1, duration: 5, stagger: 2 }
-    );
+        {scaleX: 1, scaleY: 1, duration: 5, stagger: 2, ease: "sine.out" }, "0"
+    ); 
 
     liftTl.fromTo(cartPile,
         {scaleX: 0, scaleY: 0, transformOrigin: "50% 100%" },

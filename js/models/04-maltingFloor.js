@@ -30,19 +30,18 @@ export function initMaltingFloor() {
     const cart = document.querySelectorAll("#transport-cart");
     const elevatorCargo = [ "#pile-left", "#pile-right" ]; 
     const piles = document.querySelectorAll("#grain-mounds-container > g");
+    gsap.set(piles, {scale: 0, transformOrigin: "50% 100%"});
+ 
 
-    const liftTl = gsap.timeline({ repeat: -1});
+    const liftTl = gsap.timeline({ repeat: -1, ease: "none"});
 
-    
-
-    liftTl.fromTo(piles,
-        {scaleX: 0, scaleY: 0, transformOrigin: "50% 100%" },
-        {scaleX: 1, scaleY: 1, duration: 5, stagger: 2, ease: "steps.out" }
+    liftTl.to(piles,
+        {scaleX: 1, scaleY: 1, duration: 5, stagger: 2 }
     );
 
     liftTl.fromTo(cartPile,
         {scaleX: 0, scaleY: 0, transformOrigin: "50% 100%" },
-        {scaleX: 1, scaleY: 1, duration: 2, stagger: 0.5, ease: "none" }, "-=3"
+        {scaleX: 1, scaleY: 1, duration: 2, stagger: 0.5 }, "-=3"
     );
 
     liftTl.to(cart,
@@ -55,11 +54,11 @@ export function initMaltingFloor() {
 
     liftTl.fromTo(elevatorCargo,
         {scaleX: 0, scaleY: 0, transformOrigin: "50% 100%" },
-        {scaleX: 1, scaleY: 1, duration: 1, stagger: 0.5, ease: "none" }
+        {scaleX: 1, scaleY: 1, duration: 1, stagger: 0.5 }
     );
 
     liftTl.to("#freight-elevator",
-        { y: "100%", duration: 8, ease: "none"}
+        { y: "100%", duration: 8}
     );
     liftTl.to("#freight-elevator", { duration: 5, autoAlpha: 0, yoyo: true}, "<" );
 

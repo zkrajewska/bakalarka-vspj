@@ -29,7 +29,7 @@ export function initFloorPlan() {
         {scaleY: 1.1, scaleX: 0.8, transformOrigin: "50% 100%", duration: 0.4, repeat: -1, yoyo: "true", ease: "rough"}
     );
 
-    const elevator = document.querySelectorAll("#freight-elevator > g");
+    const elevator = document.querySelectorAll("#freight-elevator1 > g");
 
     const liftTl = gsap.timeline({ repeat: -1, yoyo: true });
 

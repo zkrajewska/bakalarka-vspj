@@ -1,5 +1,7 @@
 export function initUnloadingBarley() {
 
+    const tl = gsap.timeline({paused: true, repeat: -1 });
+
     // Собираем все 4 кучи в один массив по их ID
     const grainPiles = [
         "#grain-pile1", 
@@ -17,7 +19,7 @@ export function initUnloadingBarley() {
     });
 
     // Запускаем анимацию роста
-    gsap.fromTo(grainPiles, 
+    tl.fromTo(grainPiles, 
         // НАЧАЛО: сплющены в ноль и прозрачны
         { 
             scaleY: 0,
@@ -27,7 +29,7 @@ export function initUnloadingBarley() {
         { 
             scaleY: 1,
             opacity: 1,
-            duration: 12,         // Каждая куча растет 5 секунд
+            duration: 5,         // Каждая куча растет 5 секунд
             ease: "power2.out",  // Чуть замедляется в конце
             
             // МАГИЯ ЗДЕСЬ: каждая следующая куча начнет расти на 1 секунду позже предыдущей!
@@ -35,11 +37,11 @@ export function initUnloadingBarley() {
             
             repeat: -1,          // Бесконечный цикл
             repeatDelay: 2       // Пауза 2 секунды, когда все вырастут
-        }
+        }, 0
     );
 
     // 1. Верхняя куча (#grain2) - убывает, "стекая" вниз в воронку
-    gsap.fromTo("#unloading-grain2", 
+    tl.fromTo("#unloading-grain2", 
         { scaleY: 1 }, 
         { 
             scaleY: 0.1, 
@@ -49,7 +51,7 @@ export function initUnloadingBarley() {
             transformOrigin: "50% 100%", 
             repeat: -1,               
             repeatDelay: 1            
-        }
+        }, 0
     );
 
 
@@ -57,12 +59,14 @@ export function initUnloadingBarley() {
     
     // 4. Падающая струя (если ты добавила линию #grain-stream)
     if (document.querySelector("#grain-stream")) {
-        gsap.to("#grain-stream", {
+        tl.to("#grain-stream", {
             strokeDashoffset: -24, // 12 (длина штриха) + 12 (пробел)
             duration: 0.2,
             ease: "none",
             repeat: -1
-        });
+        }, 0);
     }
+
+    return tl;
 
 }

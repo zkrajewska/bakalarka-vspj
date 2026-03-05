@@ -3,6 +3,7 @@ export function initFreightElevator() {
    
 
     const tl = gsap.timeline({
+        paused: true,
         repeat: -1,
         yoyo: true,
         repeatDelay: 1
@@ -44,4 +45,6 @@ export function initFreightElevator() {
         duration: travelTime,           // Время должно совпадать с движением кабин (5 сек)
         ease: "power2.inOut",  // Должно совпадать с движением кабин
     }, 0);
+
+    return tl;
 }

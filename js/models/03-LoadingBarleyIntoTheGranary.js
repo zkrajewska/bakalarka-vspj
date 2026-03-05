@@ -1,6 +1,7 @@
 gsap.registerPlugin(MotionPathPlugin);
 
 export function initLoadingBarley() {
+    const tl = gsap.timeline({  paused: true });
 
     // 1. Собираем все линии зерна из всех трех групп
     const grainPaths = gsap.utils.toArray([
@@ -10,12 +11,12 @@ export function initLoadingBarley() {
     ]);
 
     // 2. Запускаем бесконечный поток
-    gsap.to(grainPaths, {
+    tl.to(grainPaths, {
         strokeDashoffset: -16.52, // Смещаем ровно на один цикл (штрих + пробел)
         duration: 0.6,            // Скорость падения (0.2 - это очень быстро, как раз для зерна)
         ease: "none",             // Равномерно, чтобы не было рывков
         repeat: -1                // Бесконечно
-    });
+    }, 0);
 
     // 1. Находим все наши квадратики
     const scoops = gsap.utils.toArray(".scoop");
@@ -24,7 +25,7 @@ export function initLoadingBarley() {
     scoops.forEach((scoop, index) => {
         
         // Создаем временную шкалу для элемента
-        let tl = gsap.timeline({
+        let scooptl = gsap.timeline({
             repeat: -1,                // Крутим бесконечно
             defaults: { ease: "none" } // Важно: движение должно быть равномерным
         });
@@ -38,7 +39,7 @@ export function initLoadingBarley() {
         const totalDuration = 12; // Общее время в пути от низа до верха (6 секунд)
 
         // ДЕЙСТВИЕ 1: Движение по линии (занимает все 6 секунд)
-        tl.to(scoop, {
+        scooptl.to(scoop, {
             duration: totalDuration,
             motionPath: {
                 path: "#scoop-motionpath",
@@ -48,10 +49,12 @@ export function initLoadingBarley() {
         }, 0); // Ноль означает: "Начать в самую 0-ю секунду"
 
         // ДЕЙСТВИЕ 2: Управление прозрачностью (работает параллельно с движением)
-        tl.to(scoop, { opacity: 1, duration: 0.8 }, 0)                    // Плавное ПОЯВЛЕНИЕ в первые 0.8 сек
-          .to(scoop, { opacity: 0, duration: 0.8 }, totalDuration - 0.8); // Плавное ИСЧЕЗНОВЕНИЕ за 0.8 сек до конца
+        scooptl.to(scoop, { opacity: 1, duration: 0.8 }, 0)                    // Плавное ПОЯВЛЕНИЕ в первые 0.8 сек
+        scooptl.to(scoop, { opacity: 0, duration: 0.8 }, totalDuration - 0.8); // Плавное ИСЧЕЗНОВЕНИЕ за 0.8 сек до конца
 
-        // ДЕЙСТВИЕ 3: Распределяем их равномерно по всей длине конвейера
-        tl.progress(index / scoops.length);
+        // Мы добавляем каждый ковш в главный таймлайн в позицию 0.
+        tl.add(scooptl.delay(-index * (totalDuration / scoops.length)), 0);
         });
+
+        return tl;
 }

@@ -5,77 +5,73 @@ import { initMaltingFloor } from './models/04-maltingFloor.js';
 import { initFreightElevator } from './models/05-freightElevator.js';
 import { initUnloadingBarley } from './models/06-unloadingBarleyFromTheGranary.js';
 
-document.addEventListener('DOMContentLoaded', () => {
+gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
+
+const modelsData = [
+    { id: '01-floorPlanAnimation', path: 'source-files/svgs/01-floorPlanAnimation.svg', init: initFloorPlan },
+    { id: '02-bucketElevator', path: 'source-files/svgs/02-bucketElevator.svg', init: initBucketElevator },
+    { id: '03-LoadingBarleyIntoTheGranary', path: 'source-files/svgs/03-LoadingBarleyIntoTheGranary.svg', init: initLoadingBarley },
+    { id: '04-maltingFloor', path: 'source-files/svgs/04-maltingFloor.svg', init: initMaltingFloor },
+    { id: '05-freightElevator', path: 'source-files/svgs/05-freightElevator.svg', init: initFreightElevator },
+    { id: '06-unloadingBarleyFromTheGranary', path: 'source-files/svgs/06-unloadingBarleyFromTheGranary.svg', init: initUnloadingBarley }
+];
+
+const loadedTimelines = {};
+
+async function loadSVG(model) {
+try {
+        const response = await fetch(model.path);
+        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+        const svgCode = await response.text();
+        const container = document.getElementById(model.id);
+        
+        if (container) {
+            container.innerHTML = svgCode;
+            // save timeline by id
+            loadedTimelines[model.id] = model.init();
+        }
+    } catch (e) {
+        console.error("error loading model " + model.id, e);
+    }
+}
+
+document.addEventListener('DOMContentLoaded', async () => {
+    // load all svg
+    await Promise.all(modelsData.map(loadSVG));
     
-    // Функция для загрузки SVG
-    // Укажи правильный путь к твоему файлу (судя по твоему скриншоту, он лежит в source-files/svgs/)
-    fetch('source-files/svgs/01-floorPlanAnimation.svg')
-        .then(response => response.text()) // Получаем код файла как текст
-        .then(svgCode => {
-            // Вставляем полученный код в наш пустой div
-            document.getElementById('01-floorPlanAnimation').innerHTML = svgCode;
-            
-            // ВАЖНО: Запускаем GSAP только ПОСЛЕ того, как картинка вставилась на страницу!
-            initFloorPlan();
-        })
-        .catch(error => console.error("Ошибка загрузки SVG:", error));
+    // use timeout for brouser loading svg
+    requestAnimationFrame(() => {
+        setTimeout(() => {
+            // refresh scrolltriger
+            ScrollTrigger.refresh();
 
-    fetch('source-files/svgs/02-bucketElevator.svg')
-        .then(response => response.text()) // Получаем код файла как текст
-        .then(svgCode => {
-            // Вставляем полученный код в наш пустой div
-            document.getElementById('02-bucketElevator').innerHTML = svgCode;
-            
-            // ВАЖНО: Запускаем GSAP только ПОСЛЕ того, как картинка вставилась на страницу!
-            initBucketElevator();
-        })
-        .catch(error => console.error("Ошибка загрузки SVG:", error));
+            const pages = document.querySelectorAll('[id^="page"]');
 
-    fetch('source-files/svgs/03-LoadingBarleyIntoTheGranary.svg')
-        .then(response => response.text()) // Получаем код файла как текст
-        .then(svgCode => {
-            // Вставляем полученный код в наш пустой div
-            document.getElementById('03-LoadingBarleyIntoTheGranary').innerHTML = svgCode;
-            
-            // ВАЖНО: Запускаем GSAP только ПОСЛЕ того, как картинка вставилась на страницу!
-            initLoadingBarley();
-        })
-        .catch(error => console.error("Ошибка загрузки SVG:", error));
+            pages.forEach((page, i) => {
+                const modelId = modelsData[i].id;
+                const tl = loadedTimelines[modelId];
 
-
-    fetch('source-files/svgs/04-maltingFloor.svg')
-        .then(response => response.text()) // Получаем код файла как текст
-        .then(svgCode => {
-            // Вставляем полученный код в наш пустой div
-            document.getElementById('04-maltingFloor').innerHTML = svgCode;
-            
-            // ВАЖНО: Запускаем GSAP только ПОСЛЕ того, как картинка вставилась на страницу!
-            initMaltingFloor();
-        })
-        .catch(error => console.error("Ошибка загрузки SVG:", error));
-
-    fetch('source-files/svgs/05-freightElevator.svg')
-        .then(response => response.text()) // Получаем код файла как текст
-        .then(svgCode => {
-            // Вставляем полученный код в наш пустой div
-            document.getElementById('05-freightElevator').innerHTML = svgCode;
-            
-            // ВАЖНО: Запускаем GSAP только ПОСЛЕ того, как картинка вставилась на страницу!
-            initFreightElevator();
-        })
-        .catch(error => console.error("Ошибка загрузки SVG:", error));
-
-    fetch('source-files/svgs/06-unloadingBarleyFromTheGranary.svg')
-        .then(response => response.text()) // Получаем код файла как текст
-        .then(svgCode => {
-            // Вставляем полученный код в наш пустой div
-            document.getElementById('06-unloadingBarleyFromTheGranary').innerHTML = svgCode;
-            
-            // ВАЖНО: Запускаем GSAP только ПОСЛЕ того, как картинка вставилась на страницу!
-            initUnloadingBarley();
-        })
-        .catch(error => console.error("Ошибка загрузки SVG:", error));
-
+                if (tl) {
+                    ScrollTrigger.create({
+                        trigger: page,
+                        start: "top 70%", 
+                        end: "bottom 30%",
+                        onEnter: () => {
+                            console.log(`▶️ Запуск: ${modelId}`);
+                            tl.play();
+                        },
+                        onLeave: () => tl.pause(),
+                        onEnterBack: () => tl.play(),
+                        onLeaveBack: () => tl.pause(),
+                        markers: true 
+                    });
+                }
+            });
+        }, 200); //pause so everything will have enough time to load
+    });
 });
+
+
+
 
 

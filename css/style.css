@@ -12,7 +12,7 @@ body{
     align-items: center;
     justify-content: center;
     width: 100%;
-    padding: 2rem;
+    padding: 0 1rem;
 }
 .content-card {
     background-color: white;
@@ -20,6 +20,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 1rem 0;
 }
 
 h2, p{
@@ -213,7 +214,7 @@ p{
 
 h2, p{
     margin: 3rem auto;
-    width: 60%;
+    width: 70%;
 }
 
 p{
@@ -226,7 +227,7 @@ p{
 /* Burger Icon Styling */
 .burger-icon {
     position: fixed;
-    top: 3rem;
+    top: 2rem;
     right: 3rem;
     width: 40px;
     height: 30px;

@@ -24,7 +24,7 @@ body{
 }
 
 h2, p{
-    margin: 2rem auto;
+    margin: 1rem auto;
     width: 100%;
 }
 
@@ -40,7 +40,7 @@ p{
 #page4,
 #page5,
 #page6{
-    height: 90vh;
+    min-height: 90vh;
     width: 90%;
     display: flex;
     flex-direction: column;

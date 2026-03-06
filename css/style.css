@@ -63,6 +63,7 @@ p{
 #page5 .small-screen{
     min-width: 25vw;
     min-height: 50vh;
+    margin-top: 5rem;
 }
 
 .small-screen > div {

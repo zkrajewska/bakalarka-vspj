@@ -16,79 +16,73 @@ export function initBucketElevator() {
         gsap.set(bucket, { rotation: 0 });
 
         let bucketTween = tl.to(bucket, {
-            duration: 50,             // Время одного полного круга 
-            repeat: -1,              // Бесконечно
-            ease: "none",            // Обязательно равномерно, без рывков
+            duration: 50,             // time of one circle
+            repeat: -1,              
+            ease: "none",            
             motionPath: {
-                path: "#conveyor-belt",  // ID линии, по которой они поедут
-                align: "#conveyor-belt", // Привязываем ковши к линии
-                alignOrigin: [1, 1], // Центрируем ковш на линии
-                autoRotate: 120        // Ковши будут поворачиваться по изгибам ленты
+                path: "#conveyor-belt",  // ID of line they will slide on
+                align: "#conveyor-belt", // connect buckets with line
+                alignOrigin: [1, 1], 
+                autoRotate: 120        
             }
         }, 0);
 
-        // МАГИЯ РАСПРЕДЕЛЕНИЯ:
-    // Находим последнюю добавленную анимацию в таймлайне и сдвигаем её старт
+       
+    // Make every bucket start a little bit later
     const allTweens = tl.getChildren();
     const lastTween = allTweens[allTweens.length - 1];
     
-    // Сдвигаем время старта назад, чтобы ковши оказались в разных точках пути
+    
     lastTween.startTime(-index * (50 / buckets.length));
     });
 
-    // Выбираем все пути внутри группы #grain
     const grains = gsap.utils.toArray("#grain path");
 
-    // 1. Сначала мы лечим баг SVG: принудительно задаем всем зернам чистый паттерн без нулей!
     gsap.set(".grain", { 
         strokeDasharray: "36.482, 29.186" 
     });
 
-    // 2. Группируем НИЖНИЕ зерна (1, 2, 3)
     const bottomGrains = ["#grain1", "#grain2", "#grain3"];
     
     tl.to(bottomGrains, {
         strokeDashoffset: -65.668, 
-        duration: 0.5,   // Скорость для нижних (можешь менять)
+        duration: 0.5,   
         ease: "none",    
         repeat: -1       
     }, 0);
 
-    // 3. Группируем ВЕРХНИЕ зерна (4, 5, 6)
+    
     const topGrains = ["#grain4", "#grain5", "#grain6"];
     
     tl.to(topGrains, {
         strokeDashoffset: -65.668, 
-        duration: 0.5,   // Скорость для верхних
+        duration: 0.5,   
         ease: "none",    
         repeat: -1       
     }, 0);
 
     tl.to("#chain", {
-    // ВАЖНО: Направление движения
-    // Если цепь должна ехать ВНИЗ, ставь положительное число: 65.668
-    // Если цепь должна ехать ВВЕРХ, ставь с минусом: -65.668
         strokeDashoffset: 65.668, 
     
-        duration: 0.5,   // Скорость движения цепи (подгони под скорость ковшей)
-        ease: "none",    // Равномерное движение без рывков
-        repeat: -1       // Крутим бесконечно
+        duration: 0.5,   
+        ease: "none",    
+        repeat: -1      
     }, 0);
 
-    // 1. Анимируем ВЕРХНЮЮ шестеренку
+    
     tl.to("#pulley-top", {
-        rotation: 360,               // Крутим на один полный оборот
-        svgOrigin: "985.4 422.9",    // Идеально точные координаты центра!
-        duration: 4,                 // Скорость вращения
-        ease: "none",                // Равномерно, без торможений
-        repeat: -1                   // Бесконечно
+        rotation: 360,               
+        svgOrigin: "985.4 422.9",    
+        duration: 4,                 
+        ease: "none",                
+        repeat: -1                   
     }, 0);
 
-    // 2. Анимируем НИЖНЮЮ шестеренку
+    
     tl.to("#pulley-bottom", {
         rotation: 360,
-        svgOrigin: "1010.2 2534.3",  // Точный центр нижнего колеса
-        duration: 4,                 // Скорость (должна быть такой же, как у верхнего)
+        svgOrigin: "1010.2 2534.3",  
+        duration: 4,                 
         ease: "none",
         repeat: -1
     }, 0);

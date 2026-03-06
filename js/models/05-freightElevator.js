@@ -11,18 +11,17 @@ export function initFreightElevator() {
 
     const travelTime = 5;
 
-    // Выбираем все части лифта, которые должны ехать
     const elevatorBox = [
         "#cabin-box-left", 
         "#cabin-box-right",
         "#cable-foundation"
     ];
 
-    // Запускаем анимацию
+    
     tl.to(elevatorBox, {
-        y: -4450,              // Значение сдвига вверх (подбери точное число по высоте этажей)
-        duration: travelTime,           // Длительность поездки в одну сторону (в секундах)
-        ease: "power2.inOut",  // Плавный разгон и торможение
+        y: -4450,              
+        duration: travelTime,           
+        ease: "power2.inOut",  
     }, 0);
 
     const elevatorCabels = [
@@ -30,20 +29,20 @@ export function initFreightElevator() {
         "#cable-left"
     ];
 
-        // Запускаем анимацию
+        
     tl.to(elevatorCabels, {
-        scaleY: 0,           // Сжимаем кабель до 10% от его изначальной длины
-        transformOrigin: "top", // Точка трансформации - верхний край кабеля
+        scaleY: 0,           
+        transformOrigin: "top", 
         opacity: 0,
-        duration: 4.5,           // Время должно совпадать с движением кабин (5 сек)
-        ease: "power2.inOut",  // Должно совпадать с движением кабин
+        duration: 4.5,           
+        ease: "power2.inOut",  
     }, 0);
 
     tl.to("#main-cable", {
-        scaleY: 0.03,           // Сжимаем кабель до 10% от его изначальной длины
-        transformOrigin: "top", // Точка трансформации - верхний край кабеля
-        duration: travelTime,           // Время должно совпадать с движением кабин (5 сек)
-        ease: "power2.inOut",  // Должно совпадать с движением кабин
+        scaleY: 0.03,           
+        transformOrigin: "top", 
+        duration: travelTime,           
+        ease: "power2.inOut",  
     }, 0);
 
     return tl;

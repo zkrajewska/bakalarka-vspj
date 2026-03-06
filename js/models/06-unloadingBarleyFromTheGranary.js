@@ -2,7 +2,7 @@ export function initUnloadingBarley() {
 
     const tl = gsap.timeline({paused: true, repeat: -1 });
 
-    // Собираем все 4 кучи в один массив по их ID
+    
     const grainPiles = [
         "#grain-pile1", 
         "#grain-pile2", 
@@ -13,41 +13,41 @@ export function initUnloadingBarley() {
         "#grain-pile7"
     ];
 
-    // Прибиваем точку роста каждой кучи к самому низу (к полу)
+    
     gsap.set(grainPiles, { 
         transformOrigin: "50% 100%" 
     });
 
-    // Запускаем анимацию роста
+    
     tl.fromTo(grainPiles, 
-        // НАЧАЛО: сплющены в ноль и прозрачны
+        
         { 
             scaleY: 0,
             opacity: 0
         }, 
-        // КОНЕЦ: полный размер
+        
         { 
             scaleY: 1,
             opacity: 1,
-            duration: 5,         // Каждая куча растет 5 секунд
-            ease: "power2.out",  // Чуть замедляется в конце
+            duration: 5,         
+            ease: "power2.out",  
             
-            // МАГИЯ ЗДЕСЬ: каждая следующая куча начнет расти на 1 секунду позже предыдущей!
+            
             stagger: 1,          
             
-            repeat: -1,          // Бесконечный цикл
-            repeatDelay: 2       // Пауза 2 секунды, когда все вырастут
+            repeat: -1,          
+            repeatDelay: 2       
         }, 0
     );
 
-    // 1. Верхняя куча (#grain2) - убывает, "стекая" вниз в воронку
+    
     tl.fromTo("#unloading-grain2", 
         { scaleY: 1 }, 
         { 
             scaleY: 0.1, 
             duration: 12,             
             ease: "none", 
-            // Жестко прибиваем точку к низу верхней кучи
+            
             transformOrigin: "50% 100%", 
             repeat: -1,               
             repeatDelay: 1            
@@ -57,10 +57,10 @@ export function initUnloadingBarley() {
 
 
     
-    // 4. Падающая струя (если ты добавила линию #grain-stream)
+    
     if (document.querySelector("#grain-stream")) {
         tl.to("#grain-stream", {
-            strokeDashoffset: -24, // 12 (длина штриха) + 12 (пробел)
+            strokeDashoffset: -24, 
             duration: 0.2,
             ease: "none",
             repeat: -1

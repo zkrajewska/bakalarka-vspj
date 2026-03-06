@@ -53,7 +53,7 @@ export function initFloorPlan() {
         wheelGroup.style.cursor = "pointer";
 
         wheelGroup.addEventListener ("click", () => {
-        document.getElementById("popup-title").innerText = "Bývalá mlynice";
+        document.getElementById("popup-title").innerText = "Bývalá hlynice";
         document.getElementById("popup-text").innerText = "Tento prostor původně sloužil pro zpracování nebo ukládání materiálu, v rámci sladovnického provozu však plnil důležitou doplňkovou funkci.";
         document.getElementById("popup-image-container").innerHTML = `
         <svg viewBox="1365 95 160 160" width="100" height="100">

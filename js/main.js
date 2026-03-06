@@ -71,6 +71,24 @@ document.addEventListener('DOMContentLoaded', async () => {
     });
 });
 
+const burger = document.getElementById('burger-menu');
+const overlay = document.getElementById('menu-overlay');
+const navLinks = document.querySelectorAll('#menu-overlay a');
+
+// Toggle menu open/close
+burger.addEventListener('click', () => {
+    burger.classList.toggle('open');
+    overlay.classList.toggle('menu-hidden');
+});
+
+// Close menu when a link is clicked
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        burger.classList.remove('open');
+        overlay.classList.add('menu-hidden');
+    });
+});
+
 
 
 

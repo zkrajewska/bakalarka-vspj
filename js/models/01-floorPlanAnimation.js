@@ -53,8 +53,8 @@ export function initFloorPlan() {
         wheelGroup.style.cursor = "pointer";
 
         wheelGroup.addEventListener ("click", () => {
-        document.getElementById("popup-title").innerText = "Water wheel";
-        document.getElementById("popup-text").innerText = "The wheel is using energy of the water for malt mechanismus.";
+        document.getElementById("popup-title").innerText = "Bývalá mlynice";
+        document.getElementById("popup-text").innerText = "Tento prostor původně sloužil pro zpracování nebo ukládání materiálu, v rámci sladovnického provozu však plnil důležitou doplňkovou funkci.";
         document.getElementById("popup-image-container").innerHTML = `
         <svg viewBox="1365 95 160 160" width="100" height="100">
             <g id="wheel">
@@ -81,8 +81,8 @@ export function initFloorPlan() {
         fireGroup.style.cursor = "pointer";
 
         fireGroup.addEventListener ("click", () => {
-        document.getElementById("popup-title").innerText = "Water wheel";
-        document.getElementById("popup-text").innerText = "The wheel is using energy of the water for malt mechanismus.";
+        document.getElementById("popup-title").innerText = "Topná pec";
+        document.getElementById("popup-text").innerText = "Zdrojem nezbytného tepla pro celou sladovnu byla masivní topná pec, která zajišťovala stabilní teplotu v budově. Horký vzduch z pece se využíval především při závěrečné fázi – hvozdění, tedy sušení naklíčeného sladu.";
         document.getElementById("popup-image-container").innerHTML = `
         <svg viewBox="1610 50 160 150" width="100" height="100">
             <g id="funace-area">
@@ -113,8 +113,8 @@ export function initFloorPlan() {
         pileGroup.style.cursor = "pointer";
 
         pileGroup.addEventListener ("click", () => {
-        document.getElementById("popup-title").innerText = "Water wheel";
-        document.getElementById("popup-text").innerText = "The wheel is using energy of the water for malt mechanismus.";
+        document.getElementById("popup-title").innerText = "Humno";
+        document.getElementById("popup-text").innerText = "Prostorný sál s nízkou teplotou představuje klíčovou část sladovny, kde se namočený ječmen rozprostíral v nízkých vrstvách na podlahu. Právě zde docházelo k řízenému klíčení obilí, které museli sladovníci pravidelně ručně přehazovat.";
         document.getElementById("popup-image-container").innerHTML = `
         <svg viewBox="470 340 180 100" width="100" height="100">
             <g id="pile5">
@@ -137,10 +137,10 @@ export function initFloorPlan() {
         elevatorGroup.style.cursor = "pointer";
 
         elevatorGroup.addEventListener ("click", () => {
-        document.getElementById("popup-title").innerText = "Water wheel";
-        document.getElementById("popup-text").innerText = "The wheel is using energy of the water for malt mechanismus.";
+        document.getElementById("popup-title").innerText = "Výtah";
+        document.getElementById("popup-text").innerText = "Mechanický výtah zajišťoval vertikální přepravu těžkých pytlů s obilím a hotovým sladem mezi jednotlivými podlažími. Tento systém výrazně usnadňoval logistiku provozu a propojoval sklady s výrobními prostory.";
         document.getElementById("popup-image-container").innerHTML = `
-        <svg viewBox="1590 340 190 120" width="100" height="100">
+        <svg viewBox="1590 300 190 120" width="100" height="200">
              <g id="freight-elevator1">
                 <path id="lift-cables" d="M1598.222,410.507l23.622,-63.82l53.065,-23.622l0.147,-47.244l2.3,0l0,47.244l54.331,20.079l20.079,64.961" style="fill:none;stroke:#6f4a34;stroke-width:4.17px;"/>
                 <rect id="lift-frame-right" x="1615.073" y="317.815" width="14.313" height="119.47" style="fill:#805a43;"/>
@@ -172,8 +172,8 @@ export function initFloorPlan() {
         cleanerGroup.style.cursor = "pointer";
 
         cleanerGroup.addEventListener ("click", () => {
-        document.getElementById("popup-title").innerText = "Water wheel";
-        document.getElementById("popup-text").innerText = "The wheel is using energy of the water for malt mechanismus.";
+        document.getElementById("popup-title").innerText = "Stará liška";
+        document.getElementById("popup-text").innerText = "Tato mechanická drtička sloužila k prvotnímu zpracování a rozrušení struktury ječmenného zrna. Díky drcení se obnažilo jádro, což usnadnilo následné procesy namáčení a klíčení.";
         document.getElementById("popup-image-container").innerHTML = `
         <svg viewBox="75 95 160 130" width="100" height="100">
             <g id="grain-pre-cleaner">

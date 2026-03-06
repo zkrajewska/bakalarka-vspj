@@ -5,69 +5,63 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-
-
-#page1{
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+body{
     background-color: beige;
-}
-
-#page2{
-    height: 100vh;
-    width: 100%;
     display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 2rem;
+}
+.content-card {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: darkgrey;
 }
 
-#page3{
-    height: 100vh;
+h2, p{
+    margin: 2rem auto;
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: beige;
 }
 
-#page4{
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: darkgrey;
+p{
+    font-size: 14px;
+    color: #000;
 }
 
-#page5{
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: beige;
-}
 
+#page1,
+#page2,
+#page3,
+#page4,
+#page5,
 #page6{
-    height: 100vh;
-    width: 100%;
+    height: 90vh;
+    width: 90%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: darkgrey;
+    padding: 3rem;
+    box-sizing: border-box;
+ 
 }
 
 .small-screen {
-    width: 80vw; 
-    height: 60vh; 
-    border: 2px solid red; 
+    width: 80vw;  
+    height: 30vh; 
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+#page2 .small-screen,
+#page5 .small-screen{
+    min-width: 25vw;
+    min-height: 50vh;
 }
 
 .small-screen > div {
@@ -91,8 +85,8 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     background: rgba(0, 0, 0, 0.7);
     display: flex;
     justify-content: center;
@@ -106,8 +100,7 @@
 
 .popup-content {
     background-color: white;
-    width: 90vw;
-    max-width: 600px;
+    width: 60vw;
     min-height: 40vh;
     max-height: 80vh;
     display: flex;
@@ -136,19 +129,18 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 2rem;
 }
 
 #popup-image-container svg{
    max-width: 100%;
    max-height: 100%;
-   width: auto;
-   height: auto;
+   width: 20vw;
+   height: 20vh;
 }
 
 .popup-text-content {
     flex: 2;
-    padding: 3rem 2rem;
+    padding: 0 1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -156,6 +148,7 @@
 
 #popup-title {
     font-size: 2rem;
+    margin-top: -20px;
     margin-bottom: 20px;
     color: #333;
 }
@@ -164,25 +157,69 @@
     font-size: 1rem;
     line-height: 1.6;
     color: #666;
+    margin: 0 auto;
 }
 
-@media (max-width: 400px) {
+
+@media (max-width: 820px) {
     .popup-content {
         flex-direction: column; 
         width: 90vw;
         height: auto; 
-        max-height: 80vh; 
+        max-height: 90vh; 
         overflow-y: auto; 
-        border-radius: 1.5rem;
         padding: 1.5rem;
     }
 
     
     .popup-text-content {
-        padding: 1rem 0; 
+        padding: 0; 
         display: flex;
         justify-content: center;
     }
 }
 
+@media (min-width: 768px) {
+
+#page2,
+#page5{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin: 0 auto;
+}
+
+#page2 .small-screen,
+#page5 .small-screen{
+    min-width: 30vw;
+    min-height: 70vh;
+    display: flex;
+    justify-content: flex-end;
+
+    align-items: flex-end;
+}
+
+.small-screen {
+    min-width: 80vw;  
+    min-height: 50vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+h2, p{
+    margin: 3rem auto;
+    width: 60%;
+}
+
+p{
+    font-size: 18px;
+}
+
+
+}
 

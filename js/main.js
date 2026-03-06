@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                         onLeave: () => tl.pause(),
                         onEnterBack: () => tl.play(),
                         onLeaveBack: () => tl.pause(),
-                        markers: true 
+                        markers: false
                     });
                 }
             });

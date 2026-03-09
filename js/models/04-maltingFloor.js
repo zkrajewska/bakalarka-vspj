@@ -57,20 +57,20 @@ export function initMaltingFloor() {
     const d = tl.duration(); 
     
     tl.to(GrainForCleaner  , {
-        strokeDashoffset: -21.802 * 10,
+        strokeDashoffset: -21.802 * 40,
         duration: d,
         ease: "none"}, 0 
     );
     
 
     tl.to(wheel,
-        {rotation: 360 * 8, ease: "none", duration: d, transformOrigin: "center"}, 0
+        {rotation: 360 * 4, ease: "none", duration: d, transformOrigin: "center"}, 0
     );
 
-    const pulse = 0.4;
+    const pulse = 0.8;
     const repeats = Math.max(0, Math.ceil(d / pulse) - 1); 
     tl.to(flames, 
-        {scaleY: 1.1, scaleX: 0.8, transformOrigin: "50% 100%", duration: pulse, repeat: repeats, yoyo: true, ease: "rough"}, 0
+        {scaleY: 1.1, scaleX: 0.8, transformOrigin: "50% 100%", duration: pulse, repeat: repeats, yoyo: true, ease: "sine.inOut"}, 0
     );
 
 

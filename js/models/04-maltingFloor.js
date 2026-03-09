@@ -1,6 +1,6 @@
 export function initMaltingFloor() {
 
-    const tl = gsap.timeline({ paused: true});
+    const tl = gsap.timeline({ paused: true, repeat: -1});
     
     const GrainForCleaner = document.querySelectorAll(".grain-for-cleaner1");
     const wheel = document.querySelectorAll(".wheel-part");
@@ -57,14 +57,14 @@ export function initMaltingFloor() {
     const d = tl.duration(); 
     
     tl.to(GrainForCleaner  , {
-        strokeDashoffset: -21.802 * 8,
+        strokeDashoffset: -21.802 * 10,
         duration: d,
         ease: "none"}, 0 
     );
     
 
     tl.to(wheel,
-        {rotation: 360 * 6, ease: "none", duration: d, transformOrigin: "center"}, 0
+        {rotation: 360 * 8, ease: "none", duration: d, transformOrigin: "center"}, 0
     );
 
     const pulse = 0.4;

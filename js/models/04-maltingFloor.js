@@ -1,35 +1,19 @@
 export function initMaltingFloor() {
 
-    const tl = gsap.timeline({ paused: true, repeat: -1, ease: "none"});
-
+    const tl = gsap.timeline({ paused: true});
+    
     const GrainForCleaner = document.querySelectorAll(".grain-for-cleaner1");
-
-    gsap.set(GrainForCleaner, { strokeDasharray: "12.112, 9.69" });
-
-    tl.to(GrainForCleaner  , {
-        strokeDashoffset: -21.802,
-        duration: 1,
-        repeat: -1,
-        ease: "none"}, 0 
-    );
     const wheel = document.querySelectorAll(".wheel-part");
-
-    tl.to(wheel,
-        {rotation: 360, ease: "none",duration: 10, repeat: -1, transformOrigin: "center"}, 0
-    );
-
-    tl.to(flames, 
-        {scaleY: 1.1, scaleX: 0.8, transformOrigin: "50% 100%", duration: 0.4, repeat: -1, yoyo: "true", ease: "rough"}, 0
-    );
-
     const cartPile = [ "#cart-pile1", "#cart-pile2" ];
     const elevator = document.querySelectorAll("#freight-elevator > g");
     const cart = document.querySelectorAll("#transport-cart");
     const elevatorCargo = [ "#pile-left", "#pile-right" ]; 
     const piles = document.querySelectorAll("#grain-mounds-container > g");
+    
     gsap.set(piles, {scale: 0, transformOrigin: "50% 100%"});
     gsap.set(cartPile, {scale: 0, transformOrigin: "50% 100%"});
-
+    gsap.set(GrainForCleaner, { strokeDasharray: "12.112, 9.69" });
+    
     tl.to(piles,
         {scaleX: 1, scaleY: 1, duration: 8 }, 0
     ); 
@@ -68,6 +52,27 @@ export function initMaltingFloor() {
     tl.set(cart,
         {  scaleX: -1, duration: 0.5 }
     );
+
+    // total duration of the sequence (finite)
+    const d = tl.duration(); 
+    
+    tl.to(GrainForCleaner  , {
+        strokeDashoffset: -21.802 * 8,
+        duration: d,
+        ease: "none"}, 0 
+    );
+    
+
+    tl.to(wheel,
+        {rotation: 360 * 6, ease: "none", duration: d, transformOrigin: "center"}, 0
+    );
+
+    const pulse = 0.4;
+    const repeats = Math.max(0, Math.ceil(d / pulse) - 1); 
+    tl.to(flames, 
+        {scaleY: 1.1, scaleX: 0.8, transformOrigin: "50% 100%", duration: pulse, repeat: repeats, yoyo: true, ease: "rough"}, 0
+    );
+
 
     return tl;
 }
